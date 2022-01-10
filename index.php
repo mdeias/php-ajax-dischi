@@ -14,20 +14,26 @@ require_once __DIR__ . '/database.php';
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container-header">
             <img src="img/logo-spotify.png" alt="">
         </div>
     </header>
     <main>
-        <div class="container">
-            <div class="card">
+        <div class="container-main">
+
+            <?php foreach ($database as $disc): ?>
+              <div class="card">
                 <div class="cover">
-                    
+                    <img style="width: 100%;" src="<?php echo $disc['poster'] ?>" alt="">
                 </div>
-                <h3>titolo</h3>
-                <p>artista</p>
-                <p>anno</p>
-            </div>
+                <h3><?php echo $disc['title'] ?></h3>
+                <p><?php echo $disc['author'] ?></p>
+                <p><?php echo $disc['year'] ?></p>
+
+              </div>
+
+            <?php endforeach; ?>
+
         </div>
     </main>
 </body>
