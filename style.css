@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+header{
+    height: 50px;
+    background-color: #2D3C47;
+}
+
+header img{
+    width: 40px;
+    margin-top: 5px;
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+main{
+    background-color: #1E2C3B;
+    height: calc(100vh - 50px);
+    padding-top: 40px;
+}
+
+main .card{
+    width: 180px;
+    height: 300px;
+    padding: 15px;
+    background-color: #2D3C47;
+    text-align: center;
+    
+}
+
+h3{
+    margin-top: 15px;
+}
+
+p{
+    margin: 10px;
+}
+
+main .card .cover{
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+}
