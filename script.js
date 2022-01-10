@@ -5,12 +5,17 @@ const app = new Vue({
     data:{
         discs: [],
         genres: [],
+        genreSelected: 'all',
         apiUrl: 'http://localhost:8888/php-ajax-dischi/server.php'
     },
     
     methods:{
         getData(){
-            axios.get(this.apiUrl).
+            axios.get(this.apiUrl,{
+                params:{
+                    genre: this.genreSelected
+                }
+            }).
             then(res => {
                 this.discs = res.data;
                 this.discs.forEach(disc => {
