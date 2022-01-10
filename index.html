@@ -24,13 +24,16 @@
         <main>
             <div class="container-main">
             
-                <div class="card">
+                <div 
+                v-for="(disc, index) in discs"
+                key:="index"
+                class="card">
                     <div class="cover">
-                        <img style="width: 100%;" src="" alt="">
+                        <img style="width: 100%;" :src="disc.poster" alt="">
                     </div>
-                    <h3>titolo</h3>
-                    <p>artista</p>
-                    <p>anno</p>
+                    <h3>{{disc.title}}</h3>
+                    <p>{{disc.author}}</p>
+                    <p>{{disc.year}}</p>
 
                 </div>
 
